@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My App</title>
+  <title>Quizin</title>
+  <link rel="icon" href="logo.png" type="image/png" /> <!-- Favicon -->
   <style>
     body {
       margin: 0;
@@ -11,10 +12,32 @@
       background: linear-gradient(135deg, #0f0c29, #302b63, #1f1b2f);
       color: #fff;
       text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Subtle texture overlay (stars / particles) */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      opacity: 0.2;
+      z-index: 0;
     }
 
     header {
-      padding: 60px 20px 40px;
+      padding: 80px 20px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header img.logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 22%;
+      box-shadow: 0 4px 15px rgba(124,58,237,0.6);
     }
 
     header h1 {
@@ -25,6 +48,8 @@
     header p {
       color: #ccc;
       font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .cta-buttons {
@@ -37,20 +62,24 @@
 
     .cta-buttons a {
       text-decoration: none;
-      background: #7c3aed;
+      background: linear-gradient(90deg, #7c3aed, #9f5cfb);
       padding: 14px 24px;
       border-radius: 8px;
       font-weight: bold;
       color: #fff;
       transition: 0.2s ease;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.25);
     }
 
     .cta-buttons a:hover {
-      background: #9f5cfb;
+      transform: translateY(-3px);
+      background: linear-gradient(90deg, #9f5cfb, #7c3aed);
     }
 
     section {
       padding: 60px 20px;
+      position: relative;
+      z-index: 1;
     }
 
     section h2 {
@@ -71,6 +100,7 @@
       border-radius: 12px;
       font-size: 1rem;
       text-align: left;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
 
     .review-card strong {
@@ -85,6 +115,8 @@
       background: rgba(255, 255, 255, 0.05);
       font-size: 0.9rem;
       color: #aaa;
+      position: relative;
+      z-index: 1;
     }
 
     footer a {
@@ -92,12 +124,43 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    /* Decorative blurred circles in background */
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    .circle1 {
+      width: 300px;
+      height: 300px;
+      background: #7c3aed;
+      top: -100px;
+      left: -100px;
+    }
+
+    .circle2 {
+      width: 400px;
+      height: 400px;
+      background: #ff6ec4;
+      bottom: -150px;
+      right: -100px;
+    }
   </style>
 </head>
 <body>
+  <!-- Decorative circles -->
+  <div class="bg-circle circle1"></div>
+  <div class="bg-circle circle2"></div>
+
   <header>
-    <h1>Welcome to Quizin!</h1>
-    <p>:et's get Quizin'</p>
+    <!-- App Logo -->
+    <img src="logo.png" alt="App Logo" class="logo" />
+    <h1>🚀 Welcome to Quizin!</h1>
+    <p>Compete, win, and have fun with real-time quizzes & leaderboards!</p>
     <div class="cta-buttons">
       <a href="https://play.google.com/store/apps/details?id=YOUR_ANDROID_APP_ID" target="_blank">Download for Android</a>
       <a href="https://apps.apple.com/app/idYOUR_IOS_APP_ID" target="_blank">Download for iOS</a>
@@ -126,10 +189,7 @@
     <h2>💡 Have Feedback?</h2>
     <p>We’d love to hear from you!</p>
     <div class="cta-buttons">
-      <!-- Option 1: Google Form -->
       <a href="https://forms.gle/YOUR_FORM_ID" target="_blank">Give Feedback</a>
-      <!-- Option 2: Email -->
-      <!-- <a href="mailto:your@email.com">Send Email</a> -->
     </div>
   </section>
 
