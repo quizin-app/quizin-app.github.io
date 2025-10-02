@@ -1,12 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #1f1b2f);
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta-buttons a {
+      text-decoration: none;
+      background: #7c3aed;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #fff;
+      transition: 0.2s ease;
+    }
+
+    .cta-buttons a:hover {
+      background: #9f5cfb;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .reviews {
+      display: grid;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .review-card strong {
+      display: block;
+      margin-top: 10px;
+      color: #9aa0b5;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #7c3aed;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My App</h1>
-  <p>This is a simple landing page for my mobile app.</p>
-  <p><a href="privacy-policy.html">Privacy Policy</a></p>
+  <header>
+    <h1>🚀 My Awesome App</h1>
+    <p>Compete, win, and have fun with real-time quizzes & leaderboards!</p>
+    <div class="cta-buttons">
+      <a href="https://play.google.com/store/apps/details?id=YOUR_ANDROID_APP_ID" target="_blank">Download for Android</a>
+      <a href="https://apps.apple.com/app/idYOUR_IOS_APP_ID" target="_blank">Download for iOS</a>
+    </div>
+  </header>
+
+  <section id="reviews">
+    <h2>⭐ What Our Users Say</h2>
+    <div class="reviews">
+      <div class="review-card">
+        “Super fun app! Competing in leaderboards keeps me hooked.”
+        <strong>- Alex</strong>
+      </div>
+      <div class="review-card">
+        “The design is clean and rewards are real 🔥 Highly recommend.”
+        <strong>- Priya</strong>
+      </div>
+      <div class="review-card">
+        “Perfect app for quiz lovers. Can’t wait for tournaments!”
+        <strong>- Sam</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="feedback">
+    <h2>💡 Have Feedback?</h2>
+    <p>We’d love to hear from you!</p>
+    <div class="cta-buttons">
+      <!-- Option 1: Google Form -->
+      <a href="https://forms.gle/YOUR_FORM_ID" target="_blank">Give Feedback</a>
+      <!-- Option 2: Email -->
+      <!-- <a href="mailto:your@email.com">Send Email</a> -->
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a> | 
+      <a href="app-ads.txt">app-ads.txt</a>
+    </p>
+    <p>© 2025 My App. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
